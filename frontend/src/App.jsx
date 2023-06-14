@@ -1,12 +1,16 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+/* eslint-disable import/no-extraneous-dependencies */
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import { UserProvider } from "./contexts/UserContext";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <UserProvider>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </UserProvider>
     </div>
   );
 }
