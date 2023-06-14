@@ -1,7 +1,7 @@
 const models = require("../models");
 
 const browse = (req, res) => {
-  models.video
+  models.genre
     .findAll()
     .then(([rows]) => {
       res.send(rows);
@@ -13,7 +13,7 @@ const browse = (req, res) => {
 };
 
 const read = (req, res) => {
-  models.video
+  models.genre
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -28,24 +28,7 @@ const read = (req, res) => {
     });
 };
 
-const add = (req, res) => {
-  const video = req.body;
-
-  // TODO validations (length, format...)
-
-  models.video
-    .insert(video)
-    .then(([result]) => {
-      res.location(`/video/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
-};
-
 module.exports = {
   browse,
   read,
-  add,
 };

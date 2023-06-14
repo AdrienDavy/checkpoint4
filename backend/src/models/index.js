@@ -32,6 +32,7 @@ const models = {};
 const UserManager = require("./UserManager");
 const ScenarioManager = require("./ScenarioManager");
 const VideoManager = require("./VideoManager");
+const GenreManager = require("./GenreManager");
 
 models.user = new UserManager();
 models.user.setDatabase(pool);
@@ -41,6 +42,9 @@ models.scenario.setDatabase(pool);
 
 models.video = new VideoManager();
 models.video.setDatabase(pool);
+
+models.genre = new GenreManager();
+models.genre.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
