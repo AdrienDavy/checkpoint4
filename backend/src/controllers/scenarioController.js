@@ -1,3 +1,7 @@
+/* eslint-disable camelcase */
+/* eslint-disable consistent-return */
+const path = require("path");
+const fs = require("fs");
 const models = require("../models");
 
 const browse = (req, res) => {
@@ -57,18 +61,36 @@ const readUser = (req, res) => {
 };
 
 const add = (req, res) => {
-  const scenario = req.body;
-
+  const { title, genre, synopsis, id_user_scenario } = req.body;
+  const { file } = req;
+  if (!file) {
+    return res.sendStatus(500);
+  }
   // TODO validations (length, format...)
+  const baseFolder = path.join(__dirname, "../../public/assets/scenarios");
+  const originalName = path.join(baseFolder, file.originalname);
+  const filename = path.join(baseFolder, file.filename);
+  fs.rename(filename, originalName, (err) => {
+    if (err) throw err;
+  });
+  const scenariofile = `scenarios/${file.originalname}`;
 
   models.scenario
-    .insert(scenario)
-    .then(([result]) => {
-      res.location(`/scenario/${result.insertId}`).sendStatus(201);
+    .insert({ title, genre, synopsis, scenariofile, id_user_scenario })
+    .then((result) => {
+      const newScenario = {
+        title,
+        genre,
+        synopsis,
+        scenariofile,
+        id_user_scenario,
+        id: result.insertId,
+      };
+      return res.status(201).json(newScenario);
     })
     .catch((err) => {
       console.error(err);
-      res.sendStatus(500);
+      return res.sendStatus(500);
     });
 };
 

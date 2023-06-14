@@ -13,6 +13,7 @@ const app = express();
 
 app.use(express.json());
 app.use("/assets/videos", express.static("../public/assets/videos"));
+app.use("/assets/scenarios", express.static("../public/assets/scenarios"));
 
 const cors = require("cors");
 
