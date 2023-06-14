@@ -12,6 +12,18 @@ const browse = (req, res) => {
     });
 };
 
+const browseGenre = (req, res) => {
+  models.video
+    .findByGenre()
+    .then(([rows]) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const read = (req, res) => {
   models.video
     .find(req.params.id)
@@ -46,6 +58,7 @@ const add = (req, res) => {
 
 module.exports = {
   browse,
+  browseGenre,
   read,
   add,
 };
