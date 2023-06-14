@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "lato-regular";
+  src: url(../fonts/lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "lato-bold";
+  src: url(../fonts/lato/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: "raleway-medium";
+  src: url(../fonts/raleway/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "raleway-bold";
+  src: url(../fonts/raleway/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "shadows-regular";
+  src: url(../fonts/shadow/ShadowsIntoLight-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000f30;
+  border-radius: 5px;
+}
+
+.landing-page-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #f5f8be, #000f30);
+  display: flex;
+  justify-content: center;
+}
+.landing-page-container .welcome-title {
+  position: absolute;
+  color: #fff;
+  font-family: "raleway-bold";
+  font-size: 3rem;
+  z-index: 1;
+  top: 20vh;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .welcome-title {
+    font-size: 1.5rem;
+  }
+}
+.landing-page-container .create-account-or-login {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .create-account-or-login {
+    margin-top: 5vh;
+    flex-direction: column;
+  }
+}
+.landing-page-container .create-account-or-login figure {
+  position: relative;
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+}
+.landing-page-container .create-account-or-login figure .circle {
+  opacity: 0.8;
+  background-color: #545454;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  border-radius: 50%;
+  margin: 10%;
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.landing-page-container .create-account-or-login figure .circle:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .create-account-or-login figure .circle {
+    width: 80px;
+    height: 80px;
+  }
+}
+.landing-page-container .create-account-or-login figure .circle .cross {
+  padding: 20%;
+}
+.landing-page-container .create-account-or-login figure .avatar-picture {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  margin: 10%;
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.landing-page-container .create-account-or-login figure .avatar-picture:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .create-account-or-login figure .avatar-picture {
+    width: 80px;
+    height: 80px;
+  }
+}
+.landing-page-container .create-account-or-login figure figcaption {
+  color: #fff;
+  font-family: "raleway-bold";
+}
+.landing-page-container .particles {
+  opacity: 0.2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "lato-regular";
+  src: url(../fonts/lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "lato-bold";
+  src: url(../fonts/lato/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: "raleway-medium";
+  src: url(../fonts/raleway/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "raleway-bold";
+  src: url(../fonts/raleway/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "shadows-regular";
+  src: url(../fonts/shadow/ShadowsIntoLight-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+// FONTS
+
+$font1: "lato-regular";
+$font2: "lato-bold";
+$font3: "raleway-medium";
+$font4: "raleway-bold";
+
+//COLORS
+$color1: #000f30;
+$color2: #f5f8be;
+$color3: #545454;
+
+// SCROLLBAR
+
+::-webkit-scrollbar {
+  width: 20px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: $color1;
+  border-radius: 5px;
+}
