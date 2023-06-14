@@ -1,3 +1,80 @@
 .landing-page-container {
-  color: $color1;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, $color2, $color1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  .welcome-title {
+    position: absolute;
+    color: #fff;
+    font-family: $font4;
+    font-size: 3rem;
+    z-index: 1;
+    top: 20vh;
+    text-align: center;
+    @media screen and (max-width: 500px) {
+      font-size: 1.5rem;
+    }
+  }
+  .create-account-or-login {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    @media screen and (max-width: 500px) {
+      margin-top: 5vh;
+      flex-direction: column;
+    }
+    figure {
+      margin: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .circle {
+        opacity: 0.8;
+        background-color: $color3;
+        width: 100px;
+        height: 100px;
+        z-index: 2;
+        border-radius: 50%;
+        margin: 10%;
+        @media screen and (max-width: 500px) {
+          width: 80px;
+          height: 80px;
+        }
+        .cross {
+          padding: 20%;
+        }
+      }
+      .avatar-picture {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        clip-path: circle();
+        margin: 10%;
+        @media screen and (max-width: 500px) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      figcaption {
+        color: #fff;
+        font-family: $font4;
+      }
+    }
+  }
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // mix-blend-mode: difference;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
 }

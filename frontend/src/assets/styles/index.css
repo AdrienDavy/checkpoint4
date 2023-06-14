@@ -37,5 +37,91 @@
 }
 
 .landing-page-container {
-  color: #000f30;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #f5f8be, #000f30);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.landing-page-container .welcome-title {
+  position: absolute;
+  color: #fff;
+  font-family: "raleway-bold";
+  font-size: 3rem;
+  z-index: 1;
+  top: 20vh;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .welcome-title {
+    font-size: 1.5rem;
+  }
+}
+.landing-page-container .create-account-or-login {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .create-account-or-login {
+    margin-top: 5vh;
+    flex-direction: column;
+  }
+}
+.landing-page-container .create-account-or-login figure {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landing-page-container .create-account-or-login figure .circle {
+  opacity: 0.8;
+  background-color: #545454;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  border-radius: 50%;
+  margin: 10%;
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .create-account-or-login figure .circle {
+    width: 80px;
+    height: 80px;
+  }
+}
+.landing-page-container .create-account-or-login figure .circle .cross {
+  padding: 20%;
+}
+.landing-page-container .create-account-or-login figure .avatar-picture {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  margin: 10%;
+}
+@media screen and (max-width: 500px) {
+  .landing-page-container .create-account-or-login figure .avatar-picture {
+    width: 80px;
+    height: 80px;
+  }
+}
+.landing-page-container .create-account-or-login figure figcaption {
+  color: #fff;
+  font-family: "raleway-bold";
+}
+.landing-page-container .particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }/*# sourceMappingURL=index.css.map */
