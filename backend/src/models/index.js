@@ -31,12 +31,16 @@ const models = {};
 
 const UserManager = require("./UserManager");
 const ScenarioManager = require("./ScenarioManager");
+const VideoManager = require("./VideoManager");
 
 models.user = new UserManager();
 models.user.setDatabase(pool);
 
 models.scenario = new ScenarioManager();
 models.scenario.setDatabase(pool);
+
+models.video = new VideoManager();
+models.video.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
