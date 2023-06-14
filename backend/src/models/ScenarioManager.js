@@ -13,6 +13,13 @@ class ScenarioManager extends AbstractManager {
     );
   }
 
+  findByUser(id, pseudo) {
+    return this.database.query(
+      `SELECT id_user_scenario, pseudo from user join ${this.table} on id_user_scenario = ?`,
+      [id, pseudo]
+    );
+  }
+
   insert({ title, genre, synopsis, scenario, id_user_scenario }) {
     return this.database.query(
       `insert into ${this.table} (title,genre,

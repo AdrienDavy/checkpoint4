@@ -40,6 +40,22 @@ const read = (req, res) => {
     });
 };
 
+const readUser = (req, res) => {
+  models.video
+    .findByUser(req.params.id)
+    .then(([rows]) => {
+      if (rows[0] == null) {
+        res.sendStatus(404);
+      } else {
+        res.send(rows[0]);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const add = (req, res) => {
   const video = req.body;
 
@@ -60,5 +76,6 @@ module.exports = {
   browse,
   browseGenre,
   read,
+  readUser,
   add,
 };

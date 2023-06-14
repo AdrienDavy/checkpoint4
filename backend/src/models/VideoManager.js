@@ -13,6 +13,13 @@ class VideoManager extends AbstractManager {
     );
   }
 
+  findByUser(id, pseudo) {
+    return this.database.query(
+      `SELECT id_user_video, pseudo from user join ${this.table} on id_user_video = ?`,
+      [id, pseudo]
+    );
+  }
+
   insert({ title, genre, synopsis, video, id_user_video }) {
     return this.database.query(
       `insert into ${this.table} (title,genre,
