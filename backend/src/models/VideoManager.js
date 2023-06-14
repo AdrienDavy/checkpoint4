@@ -20,13 +20,13 @@ class VideoManager extends AbstractManager {
     );
   }
 
-  insert({ title, genre, synopsis, video, id_user_video }) {
+  insert({ title, genre, synopsis, videofile, id_user_video }) {
     return this.database.query(
       `insert into ${this.table} (title,genre,
       synopsis,
-      video,
+      videofile,
       id_user_video) values (?,?,?,?,?)`,
-      [title, genre, synopsis, video, id_user_video]
+      [title, genre, synopsis, videofile, id_user_video]
     );
   }
 }

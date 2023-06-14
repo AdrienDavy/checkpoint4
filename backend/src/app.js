@@ -12,6 +12,9 @@ const app = express();
 // use some application-level middlewares
 
 app.use(express.json());
+app.use("/assets/videos", express.static("../public/assets/videos"));
+app.use("/assets/scenarios", express.static("../public/assets/scenarios"));
+app.use("/assets/images", express.static("../public/assets/images"));
 
 const cors = require("cors");
 

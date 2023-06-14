@@ -1,3 +1,7 @@
+/* eslint-disable camelcase */
+/* eslint-disable consistent-return */
+const path = require("path");
+const fs = require("fs");
 const models = require("../models");
 
 const browse = (req, res) => {
@@ -57,18 +61,36 @@ const readUser = (req, res) => {
 };
 
 const add = (req, res) => {
-  const video = req.body;
-
+  const { title, genre, synopsis, id_user_video } = req.body;
+  const { file } = req;
+  if (!file) {
+    return res.sendStatus(500);
+  }
   // TODO validations (length, format...)
+  const baseFolder = path.join(__dirname, "../../public/assets/videos");
+  const originalName = path.join(baseFolder, file.originalname);
+  const filename = path.join(baseFolder, file.filename);
+  fs.rename(filename, originalName, (err) => {
+    if (err) throw err;
+  });
+  const videofile = `videos/${file.originalname}`;
 
   models.video
-    .insert(video)
-    .then(([result]) => {
-      res.location(`/video/${result.insertId}`).sendStatus(201);
+    .insert({ title, genre, synopsis, videofile, id_user_video })
+    .then((result) => {
+      const newVideo = {
+        title,
+        genre,
+        synopsis,
+        videofile,
+        id_user_video,
+        id: result.insertId,
+      };
+      return res.status(201).json(newVideo);
     })
     .catch((err) => {
       console.error(err);
-      res.sendStatus(500);
+      return res.sendStatus(500);
     });
 };
 
