@@ -41,7 +41,6 @@
   min-height: 100vh;
   width: 100vw;
   background-image: linear-gradient(120deg, #f5f8be, #000f30);
-  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -74,10 +73,12 @@
   }
 }
 .landing-page-container .create-account-or-login figure {
+  position: relative;
   margin: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 20;
 }
 .landing-page-container .create-account-or-login figure .circle {
   opacity: 0.8;
@@ -87,6 +88,11 @@
   z-index: 2;
   border-radius: 50%;
   margin: 10%;
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.landing-page-container .create-account-or-login figure .circle:hover {
+  transform: scale(1.1);
 }
 @media screen and (max-width: 500px) {
   .landing-page-container .create-account-or-login figure .circle {
@@ -105,6 +111,11 @@
   -webkit-clip-path: circle();
           clip-path: circle();
   margin: 10%;
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.landing-page-container .create-account-or-login figure .avatar-picture:hover {
+  transform: scale(1.1);
 }
 @media screen and (max-width: 500px) {
   .landing-page-container .create-account-or-login figure .avatar-picture {
@@ -117,11 +128,8 @@
   font-family: "raleway-bold";
 }
 .landing-page-container .particles {
-  position: absolute;
-  top: 0;
-  left: 0;
   opacity: 0.2;
+  position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 0;
 }/*# sourceMappingURL=index.css.map */
