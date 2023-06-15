@@ -1,0 +1,61 @@
+.navbar-container {
+  position: absolute;
+  width: 100vw;
+  z-index: 3;
+  opacity: 0.7;
+
+  .avatar {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    clip-path: circle();
+    transition: all 250ms ease;
+    cursor: pointer;
+  }
+
+  .navbar-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $color3;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top: 100px;
+    @media screen and (max-width: 768px) {
+      height: 40px;
+    }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+
+      height: 100px;
+    }
+    li .active {
+      color: #fff;
+      font-family: $font3;
+      font-size: 1.2rem;
+      transition: all 350ms ease;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
+      @media screen and (max-width: 500px) {
+        margin: 20px auto;
+      }
+    }
+    .pending {
+      color: #fff;
+      opacity: 0.5;
+      font-family: $font3;
+      font-size: 1.2rem;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
+      @media screen and (max-width: 500px) {
+        gap: 20px;
+      }
+    }
+  }
+}
