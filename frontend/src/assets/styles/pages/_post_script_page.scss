@@ -58,6 +58,12 @@
         width: 80%;
       }
     }
+    select:focus {
+      background-color: $color3;
+    }
+    option {
+      color: #fff;
+    }
     input {
       background: transparent;
       padding: 2px;

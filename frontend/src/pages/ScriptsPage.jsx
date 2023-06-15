@@ -19,7 +19,7 @@ function ScriptsPage() {
   return (
     <div className="scripts-page-container">
       {scenarioData.map((scenario) => {
-        return <ScriptCard scenario={scenario} />;
+        return <ScriptCard scenario={scenario} key={scenario.id} />;
       })}
       <img src={particles} alt="Particles" className="particles" />
     </div>

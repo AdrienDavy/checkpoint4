@@ -485,6 +485,12 @@
     width: 80%;
   }
 }
+.post-script-page-container .post-script-page-inputs select:focus {
+  background-color: #545454;
+}
+.post-script-page-container .post-script-page-inputs option {
+  color: #fff;
+}
 .post-script-page-container .post-script-page-inputs input {
   background: transparent;
   padding: 2px;
