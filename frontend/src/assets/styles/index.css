@@ -415,4 +415,128 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.post-script-page-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #f5f8be, #000f30);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.post-script-page-container .post-script-page-inputs {
+  margin: 25vh auto 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .post-script-page-container .post-script-page-inputs {
+    margin: 20vh auto 0 auto;
+  }
+}
+.post-script-page-container .post-script-page-inputs label {
+  color: #fff;
+  font-family: "raleway-bold";
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .post-script-page-container .post-script-page-inputs label {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post-script-page-container .post-script-page-inputs label {
+    top: 10vh;
+  }
+}
+@media screen and (max-width: 375px) {
+  .post-script-page-container .post-script-page-inputs label {
+    font-size: 0.8rem;
+  }
+}
+.post-script-page-container .post-script-page-inputs label:nth-child(7) {
+  margin-bottom: 40px;
+}
+.post-script-page-container .post-script-page-inputs input {
+  background: transparent;
+  padding: 2px;
+  margin-bottom: 40px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: #fff;
+  font-family: "raleway-medium";
+  font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .post-script-page-container .post-script-page-inputs input {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+.post-script-page-container .post-script-page-inputs #synopsis {
+  margin-top: 20px;
+  min-width: 20vw;
+  min-height: 15vh;
+  max-width: 30vw;
+  max-height: 20vh;
+  font-size: 1rem;
+  font-family: "raleway-medium";
+  text-align: justify;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+.post-script-page-container .post-script-page-inputs #synopsis:focus {
+  outline: none;
+  border: none;
+  background: rgba(84, 84, 84, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .post-script-page-container .post-script-page-inputs #synopsis {
+    min-width: 60vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .post-script-page-container .post-script-page-inputs #synopsis {
+    min-width: 70vw;
+  }
+}
+.post-script-page-container .post-script-page-inputs button {
+  margin-top: 40px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "raleway-medium";
+  font-size: 1rem;
+  background-color: rgba(84, 84, 84, 0.4);
+  -webkit-backdrop-filter: blur(20%);
+          backdrop-filter: blur(20%);
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .post-script-page-container .post-script-page-inputs button {
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    margin-top: 0;
+  }
+}
+.post-script-page-container .particles {
+  opacity: 0.2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */
