@@ -1,18 +1,18 @@
 import React from "react";
 import particles from "../assets/img/particles.png";
 
-function ScriptsPage() {
+function VideosPage() {
   return (
-    <div className="scripts-page-container">
-      <div className="scripts-page-inputs">
-        <h1 className="scripts-page-title">Titre</h1>
+    <div className="videos-page-container">
+      <div className="videos-page-inputs">
+        <h1 className="videos-page-title">Titre</h1>
 
         <h2 className="synopsis">Synopsis</h2>
 
         <div name="synopsis" id="synopsis">
           synopsis
         </div>
-        <h2 className="script-title">Scénario</h2>
+        <h2 className="video-title">Vidéo</h2>
 
         <button type="button">Ouvrir</button>
       </div>
@@ -21,4 +21,4 @@ function ScriptsPage() {
   );
 }
 
-export default ScriptsPage;
+export default VideosPage;
