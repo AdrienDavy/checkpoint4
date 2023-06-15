@@ -438,6 +438,11 @@
     margin: 20vh auto 0 auto;
   }
 }
+@media screen and (max-width: 500px) {
+  .post-script-page-container .post-script-page-inputs {
+    margin: 30vh auto 0 auto;
+  }
+}
 .post-script-page-container .post-script-page-inputs label {
   color: #fff;
   font-family: "raleway-bold";
@@ -580,6 +585,11 @@
     margin: 20vh auto 0 auto;
   }
 }
+@media screen and (max-width: 500px) {
+  .post-video-page-container .post-video-page-inputs {
+    margin: 30vh auto 0 auto;
+  }
+}
 .post-video-page-container .post-video-page-inputs label {
   color: #fff;
   font-family: "raleway-bold";
@@ -719,6 +729,11 @@
   align-items: center;
   flex-direction: column;
   z-index: 1;
+}
+@media screen and (max-width: 500px) {
+  .scripts-page-container .scripts-page-inputs {
+    margin: 30vh auto 0 auto;
+  }
 }
 .scripts-page-container .scripts-page-inputs h1 {
   color: #fff;
@@ -942,4 +957,77 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.navbar-container {
+  position: absolute;
+  width: 100vw;
+  z-index: 3;
+  opacity: 0.7;
+}
+.navbar-container .avatar {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.navbar-container .navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #545454;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  top: 100px;
+}
+@media screen and (max-width: 768px) {
+  .navbar-container .navbar-list {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar-container .navbar-list {
+    flex-direction: column;
+    height: 100px;
+  }
+}
+.navbar-container .navbar-list li .active {
+  color: #fff;
+  font-family: "raleway-medium";
+  font-size: 1.2rem;
+  transition: all 350ms ease;
+}
+@media screen and (max-width: 768px) {
+  .navbar-container .navbar-list li .active {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar-container .navbar-list li .active {
+    margin: 20px auto;
+  }
+}
+.navbar-container .navbar-list .pending {
+  color: #fff;
+  opacity: 0.5;
+  font-family: "raleway-medium";
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 768px) {
+  .navbar-container .navbar-list .pending {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar-container .navbar-list .pending {
+    gap: 20px;
+  }
 }/*# sourceMappingURL=index.css.map */

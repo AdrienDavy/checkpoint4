@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import "./assets/styles/index.css";
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import ConnexionPage from "./pages/ConnexionPage";
 import NewAccount from "./pages/NewAccount";
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <UserProvider>
+        <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<ConnexionPage />} />
