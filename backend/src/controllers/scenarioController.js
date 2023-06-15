@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable consistent-return */
-const path = require("path");
-const fs = require("fs");
+// const fs = require("node:fs");
+// const path = require("node:path");
 const models = require("../models");
 
 const browse = (req, res) => {
@@ -62,27 +62,27 @@ const readUser = (req, res) => {
 
 const add = (req, res) => {
   const { title, genre, synopsis, id_user_scenario } = req.body;
-  const { file } = req;
-  if (!file) {
-    return res.sendStatus(500);
-  }
+  // const { file } = req;
+  // if (!file) {
+  //   return res.sendStatus(500);
+  // }
   // TODO validations (length, format...)
-  const baseFolder = path.join(__dirname, "../../public/assets/scenarios");
-  const originalName = path.join(baseFolder, file.originalname);
-  const filename = path.join(baseFolder, file.filename);
-  fs.rename(filename, originalName, (err) => {
-    if (err) throw err;
-  });
-  const scenariofile = `scenarios/${file.originalname}`;
+  // const baseFolder = path.join(__dirname, "../../public/assets/scenarios");
+  // const originalName = path.join(baseFolder, file.originalname);
+  // const filename = path.join(baseFolder, file.filename);
+  // fs.rename(filename, originalName, (err) => {
+  //   if (err) throw err;
+  // });
+  // const scenariofile = `scenarios/${file.originalname}`;
 
   models.scenario
-    .insert({ title, genre, synopsis, scenariofile, id_user_scenario })
+    .insert({ title, genre, synopsis, id_user_scenario })
     .then((result) => {
       const newScenario = {
         title,
         genre,
         synopsis,
-        scenariofile,
+
         id_user_scenario,
         id: result.insertId,
       };

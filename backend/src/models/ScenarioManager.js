@@ -20,13 +20,13 @@ class ScenarioManager extends AbstractManager {
     );
   }
 
-  insert({ title, genre, synopsis, scenariofile, id_user_scenario }) {
+  insert({ title, genre, synopsis, id_user_scenario }) {
     return this.database.query(
       `insert into ${this.table} (title,genre,
       synopsis,
-      scenariofile,
-      id_user_scenario) values (?,?,?,?,?)`,
-      [title, genre, synopsis, scenariofile, id_user_scenario]
+      
+      id_user_scenario) values (?,?,?,?)`,
+      [title, genre, synopsis, id_user_scenario]
     );
   }
 }

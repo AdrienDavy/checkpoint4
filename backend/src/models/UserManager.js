@@ -5,10 +5,10 @@ class UserManager extends AbstractManager {
     super({ table: "user" });
   }
 
-  insert({ pseudo, email, login, password, city, picture }) {
+  insert({ pseudo, email, password, city }) {
     return this.database.query(
-      `insert into ${this.table} (pseudo, email, login, password, city, picture) values (?,?,?,?,?,?)`,
-      [pseudo, email, login, password, city, picture]
+      `insert into ${this.table} (pseudo, email,  password, city) values (?,?,?,?)`,
+      [pseudo, email, password, city]
     );
   }
 

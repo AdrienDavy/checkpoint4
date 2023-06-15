@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ScriptCard from "../components/ScriptCard";
 import particles from "../assets/img/particles.png";
+import useApi from "../services/useApi";
 
 function ScriptsPage() {
+  const api = useApi();
+  const [scenarioData, setScenarioData] = useState([]);
+
+  useEffect(() => {
+    api
+      .get("/scenario")
+      .then((resp) => {
+        setScenarioData(resp.data);
+      })
+      .catch((err) => {
+        console.warn(err);
+      });
+  }, []);
   return (
     <div className="scripts-page-container">
-      <div className="scripts-page-inputs">
-        <h1 className="scripts-page-title">Titre</h1>
-
-        <h2 className="synopsis">Synopsis</h2>
-
-        <div name="synopsis" id="synopsis">
-          synopsis
-        </div>
-        <h2 className="script-title">Scénario</h2>
-
-        <button type="button">Ouvrir</button>
-      </div>
+      {scenarioData.map((scenario) => {
+        return <ScriptCard scenario={scenario} key={scenario.id} />;
+      })}
       <img src={particles} alt="Particles" className="particles" />
     </div>
   );
