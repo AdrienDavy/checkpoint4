@@ -8,9 +8,12 @@ function ConnexionPage() {
       <h2 className="connexion-subtitle">
         Saisissez une adresse e-mail valide et un mot de passe sécurisé.
       </h2>
+
       <form className="connexion-inputs">
         <label htmlFor="connexion-id">ID de connexion (adresse e-mail)</label>
         <input type="text" id="connexion-id" />
+        <label htmlFor="password">Mot de passe</label>
+        <input type="text" id="password" />
         <label htmlFor="password">Mot de passe</label>
         <input type="text" id="password" />
         <button type="button">Se Connecter</button>

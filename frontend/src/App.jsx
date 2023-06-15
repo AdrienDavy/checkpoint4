@@ -3,6 +3,7 @@ import "./assets/styles/index.css";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import ConnexionPage from "./pages/ConnexionPage";
+import NewAccount from "./pages/NewAccount";
 import { UserProvider } from "./contexts/UserContext";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<ConnexionPage />} />
+          <Route path="/new" element={<NewAccount />} />
         </Routes>
       </UserProvider>
     </div>

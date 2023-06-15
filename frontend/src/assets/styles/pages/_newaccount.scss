@@ -1,4 +1,4 @@
-.connexion-container {
+.new-account-container {
   position: relative;
   min-height: 100vh;
   width: 100vw;
@@ -6,13 +6,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  .connexion-title {
+  .new-account-title {
     position: absolute;
     color: #fff;
     font-family: $font4;
     font-size: 2.5rem;
     z-index: 1;
-    top: 10vh;
+    top: 5vh;
     text-align: center;
     @media screen and (max-width: 768px) {
       font-size: 1.5rem;
@@ -21,37 +21,59 @@
       font-size: 1.1rem;
     }
   }
-  .connexion-subtitle {
+  .new-account-subtitle {
     position: absolute;
     color: #fff;
     font-family: $font1;
     font-weight: lighter;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     z-index: 1;
-    top: 16vh;
+    top: 100px;
     text-align: center;
     @media screen and (max-width: 768px) {
       font-size: 1rem;
+      top: 80px;
+    }
+    @media screen and (max-width: 500px) {
+      top: 10vh;
     }
     @media screen and (max-width: 375px) {
-      font-size: 0.8rem;
+      display: none;
     }
   }
-  .connexion-inputs {
-    margin: auto;
+
+  .new-account-inputs {
+    margin: 25vh auto 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     z-index: 1;
+    @media screen and (max-width: 768px) {
+      margin: 20vh auto 0 auto;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin: 17vh auto 0 auto;
+    }
+    @media screen and (max-width: 375px) {
+      margin: 15vh auto 0 auto;
+    }
 
     label {
       color: #fff;
       font-family: $font4;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       text-align: center;
-      margin-bottom: 20px;
+
       @media screen and (max-width: 768px) {
         font-size: 1rem;
+      }
+
+      @media screen and (max-width: 500px) {
+        top: 10vh;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 0.8rem;
       }
     }
     input {
@@ -65,6 +87,10 @@
       color: #fff;
       font-family: $font3;
       font-size: 1rem;
+      @media screen and (max-width: 500px) {
+        width: 80%;
+        margin-bottom: 20px;
+      }
     }
     button {
       margin-top: 40px;
@@ -82,7 +108,29 @@
         border-radius: 15px;
         width: 150px;
         height: 40px;
+        margin-top: 0;
       }
+    }
+  }
+  .add-avatar-picture {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    clip-path: circle();
+    transition: all 250ms ease;
+    cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 0.8rem;
     }
   }
 

@@ -132,6 +132,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .connexion-container {
@@ -225,6 +227,7 @@
   background-color: rgba(84, 84, 84, 0.4);
   -webkit-backdrop-filter: blur(20%);
           backdrop-filter: blur(20%);
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .connexion-container .connexion-inputs button {
@@ -238,4 +241,178 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.new-account-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #f5f8be, #000f30);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.new-account-container .new-account-title {
+  position: absolute;
+  color: #fff;
+  font-family: "raleway-bold";
+  font-size: 2.5rem;
+  z-index: 1;
+  top: 5vh;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .new-account-container .new-account-title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .new-account-container .new-account-title {
+    font-size: 1.1rem;
+  }
+}
+.new-account-container .new-account-subtitle {
+  position: absolute;
+  color: #fff;
+  font-family: "lato-regular";
+  font-weight: lighter;
+  font-size: 1.2rem;
+  z-index: 1;
+  top: 100px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .new-account-container .new-account-subtitle {
+    font-size: 1rem;
+    top: 80px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .new-account-container .new-account-subtitle {
+    top: 10vh;
+  }
+}
+@media screen and (max-width: 375px) {
+  .new-account-container .new-account-subtitle {
+    display: none;
+  }
+}
+.new-account-container .new-account-inputs {
+  margin: 25vh auto 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .new-account-container .new-account-inputs {
+    margin: 20vh auto 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .new-account-container .new-account-inputs {
+    margin: 17vh auto 0 auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .new-account-container .new-account-inputs {
+    margin: 15vh auto 0 auto;
+  }
+}
+.new-account-container .new-account-inputs label {
+  color: #fff;
+  font-family: "raleway-bold";
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .new-account-container .new-account-inputs label {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .new-account-container .new-account-inputs label {
+    top: 10vh;
+  }
+}
+@media screen and (max-width: 375px) {
+  .new-account-container .new-account-inputs label {
+    font-size: 0.8rem;
+  }
+}
+.new-account-container .new-account-inputs input {
+  background: transparent;
+  padding: 2px;
+  margin-bottom: 40px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: #fff;
+  font-family: "raleway-medium";
+  font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .new-account-container .new-account-inputs input {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+.new-account-container .new-account-inputs button {
+  margin-top: 40px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "raleway-medium";
+  font-size: 1rem;
+  background-color: rgba(84, 84, 84, 0.4);
+  -webkit-backdrop-filter: blur(20%);
+          backdrop-filter: blur(20%);
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .new-account-container .new-account-inputs button {
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    margin-top: 0;
+  }
+}
+.new-account-container .add-avatar-picture {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .new-account-container .add-avatar-picture {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .new-account-container .add-avatar-picture {
+    font-size: 0.8rem;
+  }
+}
+.new-account-container .particles {
+  opacity: 0.2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */
