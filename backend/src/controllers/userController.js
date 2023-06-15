@@ -1,8 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable camelcase */
 /* eslint-disable consistent-return */
-const fs = require("node:fs");
-const path = require("node:path");
+
 const Joi = require("joi");
 const models = require("../models");
 const { hashPassword } = require("../utils/auth");
@@ -18,12 +17,6 @@ const validate = (data, forCreation = true) => {
 
     email: Joi.string().email({ minDomainSegments: 2 }).presence(presence),
 
-    login: Joi.string()
-      .pattern(/^[\wÀ-ÿ]+$/)
-      .min(1)
-      .max(30)
-      .presence(presence),
-
     password: Joi.string()
       .pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/)
       .presence(presence),
@@ -33,12 +26,6 @@ const validate = (data, forCreation = true) => {
       .min(1)
       .max(30)
       .presence(presence),
-
-    // picture: Joi.string()
-    //   .pattern(/^[A-Za-zÀ-ÿ]+$/)
-    //   .min(1)
-    //   .max(30)
-    //   .presence(presence),
   }).validate(data, { abortEarly: false }).error;
 };
 
@@ -51,9 +38,7 @@ const browse = (req, res) => {
           id: userdata.id,
           pseudo: userdata.pseudo,
           email: userdata.email,
-          lastname: userdata.lastname,
           city: userdata.city,
-          picture: userdata.picture,
         };
       });
       res.send(filteredUsers);
@@ -81,25 +66,13 @@ const read = (req, res) => {
 };
 
 const add = async (req, res) => {
-  const { pseudo, email, login, password, city } = req.body;
-  let user = req.body;
-  const { file } = req;
-  if (!file) {
-    return res.sendStatus(500);
-  }
+  const user = req.body;
+
   // TODO validations (length, format...)
-  const baseFolder = path.join(__dirname, "../../public/assets/images");
-  const originalName = path.join(baseFolder, file.originalname);
-  const filename = path.join(baseFolder, file.filename);
-  fs.rename(filename, originalName, (err) => {
-    if (err) throw err;
-  });
-  const picture = `images/${file.originalname}`;
   const errors = validate(user);
   if (errors) {
     res.sendStatus(422);
   } else {
-    user = { pseudo, email, login, password, city, picture };
     user.password = await hashPassword(user.password);
     models.user
       .insert(user)

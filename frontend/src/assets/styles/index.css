@@ -360,6 +360,9 @@
     margin-bottom: 20px;
   }
 }
+.new-account-container .new-account-inputs .input-error {
+  color: red;
+}
 .new-account-container .new-account-inputs button {
   margin-top: 40px;
   border: none;

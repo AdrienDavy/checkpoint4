@@ -12,9 +12,6 @@ const app = express();
 // use some application-level middlewares
 
 app.use(express.json());
-app.use("/assets/videos", express.static("../public/assets/videos"));
-app.use("/assets/scenarios", express.static("../public/assets/scenarios"));
-app.use("/assets/images", express.static("../public/assets/images"));
 
 const cors = require("cors");
 
@@ -26,11 +23,36 @@ app.use(
 );
 
 app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "http://localhost:3306");
+  res.header("Access-Control-Allow-Origin", "http://localhost:5000");
   res.header("Access-Control-Allow-Origin", "http://localhost:5173");
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS",
+    "PUT",
+    "DELETE"
+  );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-Type",
+    "X-Auth-Token",
+    "Origin",
+    "Authorization"
+  );
   next();
 });
+app.use(
+  cors({
+    origin: [
+      "*",
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "http://localhost:5173",
+    ],
+    optionsSuccessStatus: 200,
+  })
+);
 
 // import and mount the API routes
 

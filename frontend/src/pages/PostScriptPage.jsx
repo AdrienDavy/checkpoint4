@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import useApi from "../services/useApi";
-import NewScript from "../components/NewScript";
+// import NewScript from "../components/NewScript";
 import particles from "../assets/img/particles.png";
 
 function PostScriptPage() {
@@ -11,16 +11,16 @@ function PostScriptPage() {
   const [genreData, setGenreData] = useState([]);
   const [synopsis, setSynopsis] = useState("");
   const [refresh, setRefresh] = useState(false);
-  const [fileUpload, setFileUpload] = useState(null);
-  const [urlImage, setUrlImage] = useState("");
+  // const [fileUpload, setFileUpload] = useState(null);
+  // const [urlImage, setUrlImage] = useState("");
   const api = useApi();
 
-  useEffect(() => {
-    if (fileUpload) {
-      const img = URL.createObjectURL(fileUpload);
-      setUrlImage(img);
-    }
-  }, [fileUpload]);
+  // useEffect(() => {
+  //   if (fileUpload) {
+  //     const img = URL.createObjectURL(fileUpload);
+  //     setUrlImage(img);
+  //   }
+  // }, [fileUpload]);
 
   useEffect(() => {
     const getScenario = () => {
@@ -55,7 +55,7 @@ function PostScriptPage() {
     formData.append("title", title);
     formData.append("genre", genreSelected);
     formData.append("synopsis", synopsis);
-    formData.append("scenario", fileUpload);
+    // formData.append("scenario", fileUpload);
     const url = "/scenario";
     api
       .post(url, formData)
@@ -67,10 +67,10 @@ function PostScriptPage() {
       });
   };
 
-  const handleFileUpload = (e) => {
-    const file = e.target.files[0];
-    setFileUpload(file);
-  };
+  // const handleFileUpload = (e) => {
+  //   const file = e.target.files[0];
+  //   setFileUpload(file);
+  // };
 
   return (
     <div className="post-script-page-container">
@@ -106,11 +106,11 @@ function PostScriptPage() {
           value={synopsis}
           onChange={(e) => setSynopsis(e.target.value)}
         />
-        <label htmlFor="script">Scénario</label>
-        <input type="file" id="script" onChange={handleFileUpload} />
+        {/* <label htmlFor="script">Scénario</label>
+        <input type="file" id="script" /> */}
         <button type="submit">Poster mon scénario</button>
       </form>
-      <div>
+      {/* <div>
         {scenarios.map((scenarioItem) => (
           <NewScript
             key={scenarioItem.id}
@@ -119,7 +119,7 @@ function PostScriptPage() {
             setRefresh={setRefresh}
           />
         ))}
-      </div>
+      </div> */}
       <img src={particles} alt="Particles" className="particles" />
     </div>
   );

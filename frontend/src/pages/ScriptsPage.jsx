@@ -6,6 +6,7 @@ import useApi from "../services/useApi";
 function ScriptsPage() {
   const api = useApi();
   const [scenarioData, setScenarioData] = useState([]);
+
   useEffect(() => {
     api
       .get("/scenario")

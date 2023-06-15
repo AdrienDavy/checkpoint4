@@ -18,34 +18,34 @@ function Navbar() {
             to="/newscript"
             className={({ isActive }) => (isActive ? "active" : "pending")}
           >
-            Poster un scénario
+            Poster un synopsis
           </NavLink>
         </li>
 
-        <li>
+        {/* <li>
           <NavLink
             to="/newvideo"
             className={({ isActive }) => (isActive ? "active" : "pending")}
           >
             Poster une vidéo
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to="/scripts"
             className={({ isActive }) => (isActive ? "active" : "pending")}
           >
-            Scénarios
+            Synopsis
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/videos"
             className={({ isActive }) => (isActive ? "active" : "pending")}
           >
             Vidéos
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
