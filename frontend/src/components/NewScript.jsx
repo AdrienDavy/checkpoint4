@@ -1,7 +1,13 @@
-import React from "react";
 import PropTypes from "prop-types";
+// import { Document, Page } from "react-pdf";
 
 function NewScript({ scenarioItem }) {
+  // const [numPages, setNumPages] = useState(null);
+  // const [pageNumber, setPageNumber] = useState(1);
+
+  // function onDocumentLoadSuccess({ numPages }) {
+  //   setNumPages(numPages);
+  // }
   return (
     <div className="scripts-page-inputs">
       <h1 className="scripts-page-title">{scenarioItem.title}</h1>
@@ -9,14 +15,25 @@ function NewScript({ scenarioItem }) {
       <div name="synopsis" id="synopsis">
         {scenarioItem.synopsis}
       </div>
-      <div className="file">
+      {/* <div className="file">
         <embed
           src={scenarioItem.scenariofile}
           type="application/pdf"
           width="100%"
           height="200px"
         />
-      </div>
+      </div> */}
+      {/* <div>
+        <Document
+          file={scenarioItem.scenariofile}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
+          <Page pageNumber={pageNumber} />
+        </Document>
+        <p>
+          Page {pageNumber} of {numPages}
+        </p>
+      </div> */}
     </div>
   );
 }
