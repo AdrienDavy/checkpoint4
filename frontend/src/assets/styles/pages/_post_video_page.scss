@@ -1,4 +1,4 @@
-.post-script-page-container {
+.post-video-page-container {
   position: relative;
   min-height: 100vh;
   width: 100vw;
@@ -7,7 +7,7 @@
   align-items: center;
   flex-direction: column;
 
-  .post-script-page-inputs {
+  .post-video-page-inputs {
     margin: 25vh auto 0 auto;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@
         font-size: 0.8rem;
       }
     }
-    label:nth-child(6) {
+    label:nth-child(7) {
       margin-bottom: 40px;
     }
 
@@ -55,6 +55,7 @@
         width: 80%;
       }
     }
+
     input {
       background: transparent;
       padding: 2px;
@@ -70,6 +71,9 @@
         width: 80%;
         margin-bottom: 20px;
       }
+    }
+    label:nth-child(6) {
+      margin-bottom: 40px;
     }
 
     #synopsis {
