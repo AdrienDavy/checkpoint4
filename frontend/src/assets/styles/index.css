@@ -107,9 +107,9 @@
   width: 100px;
   height: 100px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -webkit-clip-path: circle();
-          clip-path: circle();
+  clip-path: circle();
   margin: 10%;
   transition: all 250ms ease;
   cursor: pointer;
@@ -133,7 +133,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .connexion-container {
@@ -226,7 +226,7 @@
   font-size: 1rem;
   background-color: rgba(84, 84, 84, 0.4);
   -webkit-backdrop-filter: blur(20%);
-          backdrop-filter: blur(20%);
+  backdrop-filter: blur(20%);
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -242,7 +242,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .new-account-container {
@@ -374,7 +374,7 @@
   font-size: 1rem;
   background-color: rgba(84, 84, 84, 0.4);
   -webkit-backdrop-filter: blur(20%);
-          backdrop-filter: blur(20%);
+  backdrop-filter: blur(20%);
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -392,9 +392,9 @@
   width: 60px;
   height: 60px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -webkit-clip-path: circle();
-          clip-path: circle();
+  clip-path: circle();
   transition: all 250ms ease;
   cursor: pointer;
 }
@@ -417,7 +417,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .post-script-page-container {
@@ -553,7 +553,7 @@
   font-size: 1rem;
   background-color: rgba(84, 84, 84, 0.4);
   -webkit-backdrop-filter: blur(20%);
-          backdrop-filter: blur(20%);
+  backdrop-filter: blur(20%);
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -570,7 +570,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .post-video-page-container {
@@ -703,7 +703,7 @@
   font-size: 1rem;
   background-color: rgba(84, 84, 84, 0.4);
   -webkit-backdrop-filter: blur(20%);
-          backdrop-filter: blur(20%);
+  backdrop-filter: blur(20%);
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -720,7 +720,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .scripts-page-container {
@@ -828,7 +828,7 @@
   font-size: 1rem;
   background-color: rgba(84, 84, 84, 0.4);
   -webkit-backdrop-filter: blur(20%);
-          backdrop-filter: blur(20%);
+  backdrop-filter: blur(20%);
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -845,7 +845,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .videos-page-container {
@@ -948,7 +948,7 @@
   font-size: 1rem;
   background-color: rgba(84, 84, 84, 0.4);
   -webkit-backdrop-filter: blur(20%);
-          backdrop-filter: blur(20%);
+  backdrop-filter: blur(20%);
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -965,7 +965,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .navbar-container {
@@ -981,9 +981,9 @@
   width: 60px;
   height: 60px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -webkit-clip-path: circle();
-          clip-path: circle();
+  clip-path: circle();
   transition: all 250ms ease;
   cursor: pointer;
 }
@@ -1039,4 +1039,4 @@
   .navbar-container .navbar-list .pending {
     gap: 20px;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
