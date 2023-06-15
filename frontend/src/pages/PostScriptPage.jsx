@@ -1,4 +1,5 @@
 import React from "react";
+import NewScript from "../components/NewScript";
 import particles from "../assets/img/particles.png";
 
 function PostScriptPage() {
@@ -18,6 +19,9 @@ function PostScriptPage() {
         <input type="file" id="script" />
         <button type="button">Poster mon scénario</button>
       </form>
+      <div>
+        <NewScript />
+      </div>
       <img src={particles} alt="Particles" className="particles" />
     </div>
   );

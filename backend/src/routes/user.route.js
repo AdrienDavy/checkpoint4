@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const router = require("express").Router();
 const multer = require("multer");
-const path = require("path");
+
+const path = require("node:path");
 const userController = require("../controllers/userController");
 const { verifyToken } = require("../utils/auth");
 
