@@ -6,6 +6,7 @@ import ConnexionPage from "./pages/ConnexionPage";
 import NewAccount from "./pages/NewAccount";
 import PostScriptPage from "./pages/PostScriptPage";
 import PostVideoPage from "./pages/PostVideoPage";
+import ScriptsPage from "./pages/ScriptsPage";
 import { UserProvider } from "./contexts/UserContext";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/new" element={<NewAccount />} />
           <Route path="/newscript" element={<PostScriptPage />} />
           <Route path="/newvideo" element={<PostVideoPage />} />
+          <Route path="/scripts" element={<ScriptsPage />} />
         </Routes>
       </UserProvider>
     </div>
